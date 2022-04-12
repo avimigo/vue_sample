@@ -31,3 +31,8 @@ jobs:
     - name: Test
       run: npm test
       working-directory: './sample'
+    - name: Deploy
+      uses: avimigo/actions-gh-pages@3
+      with:
+        publish_branch: main
+        publish_dir: ./docs
