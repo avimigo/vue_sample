@@ -26,13 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        working-directory: './app'
+        working-directory: './sample'
     - name: CI
       run: npm ci
-      working-directory: './app'
+      working-directory: './sample'
     - name: Build
       run: npm run build --if-present
-      working-directory: './app'
+      working-directory: './sample'
     - name: Test
       run: npm test
-      working-directory: './app'
+      working-directory: './sample'
